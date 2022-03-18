@@ -1,6 +1,7 @@
 const tabsuttons = document.querySelectorAll('.design-list__item ');
 const tabsDescription = document.querySelectorAll('.design__descr');
 const imageDescription = document.querySelectorAll('.design-images');
+const designTitles = document.querySelectorAll('.design__title');
 
 //Сверяем значаение data атрибута элемента с data атрибутом кнопки, по которой пришелся клик
 const changeClassSomeEl = (elem, dataValue) => {
@@ -9,6 +10,10 @@ const changeClassSomeEl = (elem, dataValue) => {
       item.classList.remove('hidden');
     } else {
       item.classList.add('hidden');
+    }
+
+    if (item.classList.contains('design__title') && !item.classList.contains('hidden')) {
+      document.title = item.innerText;
     }
   });
 };
@@ -21,6 +26,9 @@ tabsuttons.forEach(item => {
     changeClassSomeEl(tabsDescription, dataAttr);
     changeClassSomeEl(imageDescription, dataAttr);
 
+    //Смена заголовка  секции
+    changeClassSomeEl(designTitles, dataAttr);
+
     //Кнопка, по которой кликнули становится активной и ей добавляется нужный класс
     tabsuttons.forEach(btn => {
       if (btn == e.target) {
@@ -29,11 +37,5 @@ tabsuttons.forEach(item => {
         btn.classList.remove('design-list__item_active');
       }
     });
-
-    //Смена title документа
-    if (e.target.closest('.design-list__item')) {
-      const btnText = e.target.innerText;
-      document.title = btnText;
-    }
   });
 });

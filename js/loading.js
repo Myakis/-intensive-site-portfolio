@@ -67,8 +67,8 @@ body.insertAdjacentHTML(
         <img src="img/example/image-1.png" alt="A 200" class="feature__img design-block__img" data-tabs-field="interior" />
         <img src="img/example/image-2.png" alt="A 200" class="feature__img design-block__img hidden" data-tabs-field="body" />
         <div class="design-text">
-          <h2 class="section__title design__title">Портфолио&nbsp;</h2>
-          <h2 class="section__title design__title hidden">Притягивает взгляды</h2>
+          <h2 class="section__title design__title" data-tabs-field="interior" >Портфолио&nbsp;</h2>
+          <h2 class="section__title design__title hidden" data-tabs-field="body">Притягивает взгляды</h2>
           <ul class="design-list">
             <li>
               <button
