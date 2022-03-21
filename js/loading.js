@@ -234,6 +234,12 @@ body.insertAdjacentHTML(
 <div class="timer">
   <p class="timer__text">до 31 марта скидка 20% на все услуги</p>
   <p class="timer__time">21:13:33</p>
+  <p class="timer__date">
+    <span class="timer__days">дней</span>
+    <span class="timer__hours">часов</span>
+    <span class="timer__minutes">минут</span>
+    <span class="timer__seconds">секунд</</span>
+  <p>
 </div>
 <!-- /.timer -->
 
